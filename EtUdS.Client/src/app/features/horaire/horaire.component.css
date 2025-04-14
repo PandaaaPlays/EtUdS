@@ -1,0 +1,153 @@
+.horaire {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  min-width: 1200px;
+}
+
+.body {
+  height: 100%;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.body::-webkit-scrollbar {
+  display: none;
+}
+
+.horaire-header {
+  padding-left: 45px;
+  position: relative;
+}
+
+.change-day-button {
+  position: absolute;
+  top: 40%;
+  transform: translateY(-50%);
+  border: 1px solid #E6E6E6;
+  border-radius: 5px;
+  justify-content: center;
+  align-content: center;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 1;
+  background: white;
+}
+
+.change-day-button:hover {
+  background: #E6E6E6;
+}
+
+.change-day-button.left {
+  left: 20px;
+}
+
+.change-day-button.right {
+  right: -26px;
+}
+
+.horaire-body {
+  margin-bottom: 20px;
+}
+
+.jours {
+  display: flex;
+  width: 100%;
+}
+
+.jours p {
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+  font-size: 14px;
+  color: #565656;
+  flex: 1;
+  padding: 10px;
+  margin: 0;
+  text-align: center;
+  border-left: 1px solid #E6E6E6;
+  border-right: 1px solid #E6E6E6;
+  border-bottom: 2px solid #E6E6E6;
+  word-wrap: break-word;
+  white-space: normal;
+  min-width: 50px;
+  box-sizing: border-box;
+  display: inline-flex;
+  flex-direction: column;
+}
+
+.jours p span {
+  display: block;
+  margin: 0 auto;
+}
+
+.jours p:first-child {
+  border-left: 2px solid #E6E6E6;
+}
+
+.jours p:last-child {
+  border-right: 2px solid #E6E6E6;
+}
+
+.today {
+  background: linear-gradient(to right, rgba(110, 229, 235, 0.3), rgba(4, 169, 196, 0.3));
+  border-radius: 5px;
+  padding: 0 7px;
+}
+
+.heures {
+  height: 100%;
+}
+
+.heure {
+  display: flex;
+  align-items: flex-start;
+  height: 10%;
+}
+
+.heure p {
+  font-family: 'Lato', sans-serif;
+  color: #565656;
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+  width: 45px;
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+.ligne {
+  border-left: 2px solid #E6E6E6;
+  padding-bottom: 20px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.heure:first-child .ligne {
+  border-top: 0;
+}
+
+.heure:last-child .ligne {
+  padding-bottom: 0;
+}
+
+.case {
+  color: #565656;
+  position: relative;
+  flex: 1;
+  padding: 10px;
+  margin: 0;
+  text-align: center;
+  border-left: 1px solid #E6E6E6;
+  border-bottom: 2px solid #E6E6E6;
+  border-right: 1px solid #E6E6E6;
+}
+
+.case:first-child {
+  border-left: 0;
+}
+
+.case:last-child {
+  border-right: 2px solid #E6E6E6;
+}

@@ -1,0 +1,29 @@
+<div class="notes-de-cours">
+  <div class="semaine-container" *ngFor="let semaine of semaines">
+    <h3 (click)="toggleCollapse(semaine.semaine)">
+      <i class="fa-solid"
+         [ngClass]="{'fa-chevron-right': collapsedSemaines.has(semaine.semaine),
+                     'fa-chevron-down': !collapsedSemaines.has(semaine.semaine)}"></i>
+      <span class="semaine-title">
+        {{ formatDate(semaine.dateDebut) }} - {{ formatDate(semaine.dateFin) }}
+      </span>
+    </h3>
+
+    <div *ngIf="!collapsedSemaines.has(semaine.semaine)" class="semaine-content">
+      <div *ngIf="getFichiersSemaine(semaine.semaine).length > 0" class="fichiers">
+        <div class="fichier" *ngFor="let fichier of getFichiersSemaine(semaine.semaine)">
+          <article class="document">
+            <mat-icon class="icon">file_present</mat-icon>
+            <a [title]="fichier.nomFichier" (click)="telechargerFicher(fichier.id)">
+              {{ fichier.nomFichier }} ({{formatDateString(fichier.date)}})
+            </a>
+            <span class="taille-fichier">{{fichier.taille}} KB</span>
+          </article>
+        </div>
+      </div>
+      <div *ngIf="getFichiersSemaine(semaine.semaine).length === 0" class="no-fichiers-message">
+        Aucun fichier disponible pour cette semaine.
+      </div>
+    </div>
+  </div>
+</div>

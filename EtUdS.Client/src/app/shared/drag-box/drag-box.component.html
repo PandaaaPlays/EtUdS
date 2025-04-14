@@ -1,0 +1,12 @@
+<div class="deposer-document">
+  <div class="drag-box"
+       (click)="onClick()"
+       (dragover)="onDragEnter($event)"
+       (dragleave)="onDragLeave($event)"
+       (drop)="onDrop($event)">
+    <i class="fa-solid fa-arrow-up-from-bracket"></i>
+    <span>Déposez vos document(s) ici</span>
+    <span class="parcourir">ou cliquez pour parcourir vos fichiers</span>
+    <input #fileInput type="file" (change)="onFileSelected($event)" multiple hidden>
+  </div>
+</div>

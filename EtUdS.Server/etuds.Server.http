@@ -1,0 +1,6 @@
+@etuds.Server_HostAddress = https://localhost:7055
+
+GET {{etuds.Server_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

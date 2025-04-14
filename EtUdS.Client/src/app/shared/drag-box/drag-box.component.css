@@ -1,0 +1,54 @@
+.deposer-document {
+  padding: 10px;
+  border-radius: 10px;
+  background: #E6E6E6;
+  transition: background 0.3s ease;
+  cursor: pointer;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.deposer-document:hover {
+  background: #f3f3f3;
+}
+
+.drag-box {
+  justify-content: center;
+  display: flex;
+  border-radius: 10px;
+  border: 2px dashed gray;
+  height: 100%;
+  align-items: center;
+  box-sizing: border-box;
+  flex-direction: column;
+  font-family: 'Poppins', sans-serif;
+  color: #565656;
+  min-width: 330px;
+  min-height: 150px;
+
+  i {
+    font-size: 60px;
+    margin-bottom: 10px;
+  }
+
+  span {
+    font-size: 20px;
+  }
+
+  .parcourir {
+    color: #858585;
+    font-size: 15px;
+  }
+}
+
+.drag-box * {
+  pointer-events: none;
+}
+
+.drag-box:hover {
+  border: 2px dashed #a9a9a9;
+}
+
+.drag-box.drag-over {
+  border: 2px dashed rgba(4, 169, 196, 1);
+}

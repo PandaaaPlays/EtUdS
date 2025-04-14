@@ -1,0 +1,187 @@
+.conversation {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  overflow: auto;
+}
+
+.membres {
+  color: #565656;
+  font-size: 11px;
+  font-family: 'Poppins', sans-serif;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  height: 25px;
+  transform: translateY(-12px);
+}
+
+.retour {
+  position: absolute;
+  top: 18px;
+  right: 20px;
+  color: #565656;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.edit {
+  position: absolute;
+  top: 20px;
+  left: 15px;
+  color: #0FAFC7;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.edit:hover {
+  color: rgba(110, 229, 235, 1);
+}
+
+.messages {
+  height: 100%;
+  margin-bottom: auto;
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+  overflow-x: hidden;
+}
+
+.messages::-webkit-scrollbar {
+  display: none;
+}
+
+.nouveau-message {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.texte {
+  background: #E6E6E6;
+  outline: none;
+  border-radius: 5px;
+  color: #565656;
+  padding: 4px 6px;
+  border: #565656;
+  font-size: 13px;
+  font-family: 'Poppins', sans-serif;
+  resize: none;
+  height: 19px;
+  flex-grow: 1;
+}
+
+.texte::-webkit-scrollbar {
+  display: none;
+}
+
+.bouton-envoi {
+  color: white;
+  border-radius: 5px;
+  padding: 5px 7px 5px 5px;
+  margin-left: 5px;
+  background: rgba(4, 169, 196, 1);
+}
+
+.bouton-envoi:hover {
+  background: rgba(110, 229, 235, 1);
+}
+
+.aucun {
+  font-size: 11px;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+.titre {
+  width: 100%;
+  display: flex;
+  margin-bottom: 15px;
+}
+
+.etudiants {
+  width: 100%;
+  height: auto;
+  border: 1px solid gray;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  padding: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  box-sizing: border-box;
+}
+
+.etudiants .nom {
+  background-color: #E6E6E6;
+  padding: 0 5px;
+  font-size: 14px;
+  border-radius: 8px;
+
+  i {
+    cursor: pointer;
+  }
+}
+
+.select {
+  flex-shrink: 0;
+  width: 300px;
+  position: relative;
+  background-color: #E6E6E6;
+  height: 35px;
+  border-radius: 4px;
+  margin-right: 10px;
+}
+
+.select select {
+  font-size: 16px;
+  width: 100%;
+  padding: 8px 24px 8px 10px;
+  font-family: 'Poppins', sans-serif;
+  color: #565656;
+  border: none;
+  background-color: transparent;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  cursor: pointer;
+}
+
+.select select:active, .select select:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.select:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 8px;
+  width: 0;
+  height: 0;
+  margin-top: -2px;
+  border-top: 5px solid #aaa;
+  border-right: 5px solid transparent;
+  border-left: 5px solid transparent;
+}
+
+.ajouter-etudiant {
+  display: flex;
+  flex-direction: row;
+  height: 35px;
+  margin-bottom: 10px;
+}
+
+.bouton-ajouter {
+  margin-left: auto;
+  width: 100%;
+}
+
+.bouton-quitter {
+  position: absolute;
+  bottom: 10px;
+}

@@ -1,0 +1,65 @@
+.cours{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+cours-note, cours-devoir {
+  height: 100%;
+}
+
+.menu {
+  display: flex;
+  margin-left: 15px;
+}
+
+.menu button {
+  background: none;
+  color: #565656;
+  font-family: 'Poppins', sans-serif;
+  border: 1px solid gray;
+  border-bottom: none;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  position: relative;
+  width: 200px;
+}
+
+.menu button.active {
+  font-weight: bold;
+}
+
+.menu button.active::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(to right, rgba(110, 229, 235, 1), rgba(4, 169, 196, 1));
+  transform: translateX(-50%);
+}
+
+.menu button:hover {
+  color: transparent;
+  background: linear-gradient(to right, rgba(110, 229, 235, 1), rgba(4, 169, 196, 1));
+  -webkit-background-clip: text;
+  background-clip: text;
+  font-weight: bold;
+}
+
+.body {
+  flex-grow: 1;
+  padding: 15px;
+  border-radius: 10px;
+  border: 1px solid gray;
+  height: 100%;
+  overflow: auto;
+}
+
+.body::-webkit-scrollbar {
+  display: none;
+}

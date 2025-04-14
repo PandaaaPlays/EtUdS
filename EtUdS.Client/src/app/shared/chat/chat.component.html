@@ -1,0 +1,69 @@
+<div class="chat-button" (click)="toggleChatVisibility($event)">
+  <i class="fa-regular fa-comments"></i>
+</div>
+
+<div *ngIf="notifications > 0" class="notifications"></div>
+
+<div class="chat" *ngIf="chatVisible && selectedConversationId == null" (click)="stopPropagation($event)">
+  <header [textSize]="20"
+          [titres]="[{ text: 'Conversation(s)', lien: '' }]">
+  </header>
+
+  <div class="conversations" *ngIf="conversations.length > 0">
+    <conversation-button
+      *ngFor="let conversation of conversations"
+      [nom]="conversation.nom"
+      [prenom]="conversation.prenom"
+      [message]="conversation.message"
+      [date]="conversation.date"
+      [hasNotification]="conversation.nonLus"
+      (click)="selectedConversationId = conversation.id">
+    </conversation-button>
+  </div>
+  <div *ngIf="conversations.length === 0" class="no-conversations-message">
+    Aucune conversation disponible.
+  </div>
+  <button-etuds [texte]="'Créer une nouvelle conversation'" [couleur]="'vert'" [fullWidth]="true" (click)="ajouterConversation()" class="bouton-creer"></button-etuds>
+</div>
+
+<div class="chat" *ngIf="chatVisible && selectedConversationId != null" (click)="stopPropagation($event)">
+  <conversation
+    [conversationId]="selectedConversationId"
+    [etudiants]="etudiants"
+    (deselectConversation)="deselectConversation()">
+  </conversation>
+</div>
+
+<ng-template #ajouterConversationTemplate>
+  <header
+    [textSize]="20"
+    [titres]="[{ text: 'Titre de la conversation', lien: '' }]">
+  </header>
+  <div class="titre">
+    <textarea [(ngModel)]="titre" class="texte" placeholder="Choisir un nom pour la conversation"></textarea>
+  </div>
+  <header
+    [textSize]="20"
+    [titres]="[{ text: 'Membres', lien: '' }]">
+  </header>
+  <div class="etudiants">
+    <span *ngFor="let etudiant of etudiantsAjoutes" class="nom">
+      {{ etudiant.prenom }} {{ etudiant.nom }}
+      <i class="fa-solid fa-circle-xmark" (click)="supprimerEtudiant(etudiant)"></i>
+    </span>
+    <span *ngIf="etudiantsAjoutes.length === 0">Veuillez choisir un(e) étudiant(e).</span>
+  </div>
+  <div class="ajouter-etudiant">
+    <div class="select">
+      <select [(ngModel)]="etudiantSelectionne">
+        <option [value]="null" selected>
+          -- Choisir un(e) étudiant(e) --
+        </option>
+        <option *ngFor="let etudiant of etudiantsFiltered" [ngValue]="etudiant">
+          {{ etudiant.prenom }} {{ etudiant.nom }}
+        </option>
+      </select>
+    </div>
+    <button-etuds [texte]="'Ajouter'" [couleur]="'vert'" [fullWidth]="true" class="bouton-ajouter" (click)="ajouterEtudiant()"></button-etuds>
+  </div>
+</ng-template>

@@ -1,0 +1,21 @@
+﻿<div class="devoir">
+  <header [titres]="[
+    { text: 'Devoirs', lien: '/devoirs' },
+    { text: ((devoir && devoir.nom) ? devoir.nom : ''), lien: '' }
+  ]">
+  </header>
+
+  <div class="menu">
+    <button (click)="setActiveTab('remise')" [ngClass]="{ 'active': activeTab === 'remise' }">
+      Remise
+    </button>
+    <button *ngIf="(devoir?.tailleMaxEquipes ?? 0) > 1" (click)="setActiveTab('equipe')" [ngClass]="{ 'active': activeTab === 'equipe' }">
+      Équipe
+    </button>
+  </div>
+
+  <div class="body">
+    <devoir-equipe *ngIf="activeTab === 'equipe' && (devoir?.tailleMaxEquipes ?? 0) > 1" [devoir]="devoir"></devoir-equipe>
+    <devoir-remise *ngIf="activeTab === 'remise'" [devoir]="devoir"></devoir-remise>
+  </div>
+</div>

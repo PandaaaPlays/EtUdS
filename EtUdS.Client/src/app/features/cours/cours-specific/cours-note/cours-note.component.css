@@ -1,0 +1,48 @@
+.no-fichiers-message{
+  font-family: 'Poppins', sans-serif;
+}
+
+.semaine-container {
+  i {
+    width: 20px;
+  }
+}
+
+.semaine-container:first-child h3 {
+  margin-top: 0;
+}
+
+.semaine-title {
+  margin-left: 10px;
+  padding-left: 10px;
+}
+
+.document{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px black solid;
+  border-radius: 10px;
+  padding: 10px 15px;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.icon {
+  font-size: 24px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: rgba(4, 169, 196, 1);
+}
+
+.taille-fichier{
+  margin-left: auto;
+}

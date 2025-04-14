@@ -1,0 +1,88 @@
+<div class="equipe">
+  <div class="membres">
+    <header [textSize]="20"
+            [titres]="[{ text: 'Membres', lien: '' }]">
+    </header>
+    <div class="invitations" *ngIf="invitations.length > 0">
+      <i class="fa-solid fa-circle-info"></i>
+      <span>Vous avez été invité dans une équipe. Consulter vos
+        <a (click)="voirInvitations()">invitations</a> pour les accepter ou les refuser.
+      </span>
+    </div>
+    <div *ngFor="let membreEtudiant of equipeDetailsMembres?.etudiants; let i = index">
+      <membre [etudiant]="membreEtudiant"
+              [kickable]="membreEtudiant.etudiantId !== currentEtudiantId
+              && equipeDetailsMembres.equipe.etatSoumission != EtatDevoir.Soumis
+              && equipeDetailsMembres.equipe.etatSoumission != EtatDevoir.Corrige">
+      </membre>
+    </div>
+    <div *ngFor="let i of getNombrePlacesVide()">
+      <membre [vide]="true"></membre>
+    </div>
+  </div>
+
+  <span class="equipe-size">Soumission à faire en équipe de {{ devoir.tailleMaxEquipes }} :</span>
+
+  <div class="inviter-membre">
+    <div class="select">
+      <select #etudiantSelect
+              [(ngModel)]="selectedEtudiantId"
+              [disabled]="etudiantsDisponibles.length === 0 || getNombrePlacesVide().length <= 0"
+              [ngClass]="{'disabled': etudiantsDisponibles.length === 0 || getNombrePlacesVide().length <= 0}">
+        <option *ngIf="getNombrePlacesVide().length <= 0" [value]="null" selected>
+          L'équipe est pleine
+        </option>
+        <option *ngIf="etudiantsDisponibles.length === 0" [value]="null" selected>
+          Aucun collègue de classe disponible
+        </option>
+        <option *ngFor="let etudiant of etudiantsDisponibles" [value]="etudiant.id">
+          {{ etudiant.prenom }} {{ etudiant.nom }}
+        </option>
+      </select>
+    </div>
+    <button-etuds class="inviter"
+            (click)="inviterMembre(false, selectedEtudiantId!)"
+            [disabled]="etudiantSelect.disabled"
+            [ngClass]="{'disabled': etudiantSelect.disabled}"
+            [texte]="'Inviter'"
+            [couleur]="'vert'">
+    </button-etuds>
+
+    <button-etuds class="quitter"
+            *ngIf="currentEquipeId
+            && currentEquipeId != 0
+            && equipeDetailsMembres.etudiants.length > 1
+            && equipeDetailsMembres.equipe.etatSoumission != EtatDevoir.Soumis
+            && equipeDetailsMembres.equipe.etatSoumission != EtatDevoir.Corrige"
+            (click)="quitterEquipe()"
+            [texte]="'Quitter l\'équipe'"
+            [couleur]="'rouge'">
+    </button-etuds>
+  </div>
+
+  <documents [idDevoir]="devoir.id"></documents>
+</div>
+
+<ng-template #invitationsTemplate>
+  <div class="invitations-dialog">
+    <div *ngFor="let invitation of acceptedMembresInvitations">
+      <div class="ligne">
+        <div *ngFor="let membre of invitation.membres; let last = last">
+          <p>
+            {{ membre.prenom }} {{ membre.nom }}<span *ngIf="!last">,&nbsp;</span>
+          </p>
+        </div>
+        <div class="fin-ligne">
+          <i class="fa-solid fa-square-check accepter"
+             title="Accepter"
+             (click)="accepterInvitation(invitation.equipeId)">
+          </i>
+          <i class="fa-solid fa-rectangle-xmark refuser"
+             title="Refuser"
+             (click)="refuserInvitation(invitation.equipeId)">
+          </i>
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-template>

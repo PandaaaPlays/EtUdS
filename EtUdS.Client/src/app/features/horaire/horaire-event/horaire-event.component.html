@@ -1,0 +1,11 @@
+<div class="horaire-event"
+     [ngStyle]="{'top': top + '%', 'height': height + '%'}"
+     [ngClass]="{ 'devoir': devoir }">
+  <div class="header">
+    <p class="temps" *ngIf="hour">{{ hour }} - {{ hourEnd }} ></p>
+    <p class="temps" *ngIf="!hour">{{ hourEnd }} ></p>
+    <p class="sigle">{{ sigle }}</p>
+  </div>
+  <p class="titre" #titre>{{ nom }}</p>
+  <p class="local" *ngIf="!devoir">{{ local }}</p>
+</div>

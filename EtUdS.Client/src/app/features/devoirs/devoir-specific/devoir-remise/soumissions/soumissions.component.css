@@ -1,0 +1,112 @@
+.soumissions {
+  padding: 25px 15px 0 0;
+  height: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  box-sizing: border-box;
+  overflow: auto;
+  padding-left: 15px;
+}
+
+.liens {
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  min-height: 25px;
+  max-height: 20%;
+  font-family: 'Poppins', sans-serif;
+
+  .fin {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  span {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100%;
+  }
+
+  .date {
+    margin-right: 10px;
+  }
+
+  i {
+    cursor: pointer;
+  }
+
+  .date {
+    font-family: 'Lato', sans-serif;
+  }
+
+  .fin {
+    margin-left: auto;
+    margin-right: 10px;
+    width: 190px;
+  }
+
+  .x {
+    margin-left: 5px;
+    color: #dc3545;
+  }
+
+  .x:hover {
+    color: #c82333;
+  }
+
+  .download {
+    margin-top: 1px;
+    margin-left: 15px;
+    font-size: 14px;
+    color: rgba(4, 169, 196, 1);
+  }
+
+  .download:hover {
+    color: rgba(110, 229, 235, 1);
+  }
+}
+
+.liens::-webkit-scrollbar {
+  width: 6px;
+}
+
+.liens::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 3px;
+}
+
+.liens::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.deposer-soumission {
+  min-height: 170px;
+  flex-grow: 1;
+  margin-top: 15px;
+}
+
+.boutons-soumission {
+  margin-top: 15px;
+  margin-left: auto;
+  height: 35px;
+}
+
+.annuler {
+  margin-right: 10px;
+}
+
+.soumission {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+

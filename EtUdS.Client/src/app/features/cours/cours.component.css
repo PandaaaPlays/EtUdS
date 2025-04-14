@@ -1,0 +1,12 @@
+.body {
+  display: flex;
+}
+
+.cours-cards {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.no-cours-message {
+  font-family: 'Poppins', sans-serif;
+}

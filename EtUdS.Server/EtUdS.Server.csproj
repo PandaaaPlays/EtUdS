@@ -1,0 +1,129 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <SpaRoot>..\EtUdS.Client</SpaRoot>
+    <SpaProxyLaunchCommand>npm start</SpaProxyLaunchCommand>
+    <SpaProxyServerUrl>https://localhost:4200</SpaProxyServerUrl>
+    <RootNamespace>EtUdS.Server</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.SpaProxy">
+      <Version>8.*-*</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.1" />
+    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="9.0.3" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\EtUdS.Client\EtUdS.Client.esproj">
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <_ContentIncludedByDefault Remove="publish\web.config" />
+    <_ContentIncludedByDefault Remove="publish\appsettings.Development.json" />
+    <_ContentIncludedByDefault Remove="publish\appsettings.json" />
+    <_ContentIncludedByDefault Remove="publish\EtUdS.Server.deps.json" />
+    <_ContentIncludedByDefault Remove="publish\EtUdS.Server.runtimeconfig.json" />
+    <_ContentIncludedByDefault Remove="publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\web.config" />
+    <_ContentIncludedByDefault Remove="publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\web.config" />
+    <_ContentIncludedByDefault Remove="publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\web.config" />
+    <_ContentIncludedByDefault Remove="publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\web.config" />
+    <_ContentIncludedByDefault Remove="publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\web.config" />
+    <_ContentIncludedByDefault Remove="publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\web.config" />
+    <_ContentIncludedByDefault Remove="publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\web.config" />
+    <_ContentIncludedByDefault Remove="publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\web.config" />
+    <_ContentIncludedByDefault Remove="publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\web.config" />
+    <_ContentIncludedByDefault Remove="publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\web.config" />
+    <_ContentIncludedByDefault Remove="publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\web.config" />
+    <_ContentIncludedByDefault Remove="publish\publish\publish\publish\publish\publish\publish\publish\publish\web.config" />
+    <_ContentIncludedByDefault Remove="publish\publish\publish\publish\publish\publish\publish\publish\web.config" />
+    <_ContentIncludedByDefault Remove="publish\publish\publish\publish\publish\publish\publish\web.config" />
+    <_ContentIncludedByDefault Remove="publish\publish\publish\publish\publish\publish\web.config" />
+    <_ContentIncludedByDefault Remove="publish\publish\publish\publish\publish\web.config" />
+    <_ContentIncludedByDefault Remove="publish\publish\publish\publish\web.config" />
+    <_ContentIncludedByDefault Remove="publish\publish\publish\web.config" />
+    <_ContentIncludedByDefault Remove="publish\publish\web.config" />
+    <_ContentIncludedByDefault Remove="publish\publish\appsettings.Development.json" />
+    <_ContentIncludedByDefault Remove="publish\publish\appsettings.json" />
+    <_ContentIncludedByDefault Remove="publish\publish\EtUdS.Server.deps.json" />
+    <_ContentIncludedByDefault Remove="publish\publish\EtUdS.Server.runtimeconfig.json" />
+    <_ContentIncludedByDefault Remove="publish\publish\publish\appsettings.Development.json" />
+    <_ContentIncludedByDefault Remove="publish\publish\publish\appsettings.json" />
+    <_ContentIncludedByDefault Remove="publish\publish\publish\EtUdS.Server.deps.json" />
+    <_ContentIncludedByDefault Remove="publish\publish\publish\EtUdS.Server.runtimeconfig.json" />
+    <_ContentIncludedByDefault Remove="publish\publish\publish\publish\appsettings.Development.json" />
+    <_ContentIncludedByDefault Remove="publish\publish\publish\publish\appsettings.json" />
+    <_ContentIncludedByDefault Remove="publish\publish\publish\publish\EtUdS.Server.deps.json" />
+    <_ContentIncludedByDefault Remove="publish\publish\publish\publish\EtUdS.Server.runtimeconfig.json" />
+    <_ContentIncludedByDefault Remove="publish\publish\publish\publish\publish\appsettings.Development.json" />
+    <_ContentIncludedByDefault Remove="publish\publish\publish\publish\publish\appsettings.json" />
+    <_ContentIncludedByDefault Remove="publish\publish\publish\publish\publish\EtUdS.Server.deps.json" />
+    <_ContentIncludedByDefault Remove="publish\publish\publish\publish\publish\EtUdS.Server.runtimeconfig.json" />
+    <_ContentIncludedByDefault Remove="publish\publish\publish\publish\publish\publish\appsettings.Development.json" />
+    <_ContentIncludedByDefault Remove="publish\publish\publish\publish\publish\publish\appsettings.json" />
+    <_ContentIncludedByDefault Remove="publish\publish\publish\publish\publish\publish\EtUdS.Server.deps.json" />
+    <_ContentIncludedByDefault Remove="publish\publish\publish\publish\publish\publish\EtUdS.Server.runtimeconfig.json" />
+    <_ContentIncludedByDefault Remove="publish\publish\publish\publish\publish\publish\publish\appsettings.Development.json" />
+    <_ContentIncludedByDefault Remove="publish\publish\publish\publish\publish\publish\publish\appsettings.json" />
+    <_ContentIncludedByDefault Remove="publish\publish\publish\publish\publish\publish\publish\EtUdS.Server.deps.json" />
+    <_ContentIncludedByDefault Remove="publish\publish\publish\publish\publish\publish\publish\EtUdS.Server.runtimeconfig.json" />
+    <_ContentIncludedByDefault Remove="publish\publish\publish\publish\publish\publish\publish\publish\appsettings.Development.json" />
+    <_ContentIncludedByDefault Remove="publish\publish\publish\publish\publish\publish\publish\publish\appsettings.json" />
+    <_ContentIncludedByDefault Remove="publish\publish\publish\publish\publish\publish\publish\publish\EtUdS.Server.deps.json" />
+    <_ContentIncludedByDefault Remove="publish\publish\publish\publish\publish\publish\publish\publish\EtUdS.Server.runtimeconfig.json" />
+    <_ContentIncludedByDefault Remove="publish\publish\publish\publish\publish\publish\publish\publish\publish\appsettings.Development.json" />
+    <_ContentIncludedByDefault Remove="publish\publish\publish\publish\publish\publish\publish\publish\publish\appsettings.json" />
+    <_ContentIncludedByDefault Remove="publish\publish\publish\publish\publish\publish\publish\publish\publish\EtUdS.Server.deps.json" />
+    <_ContentIncludedByDefault Remove="publish\publish\publish\publish\publish\publish\publish\publish\publish\EtUdS.Server.runtimeconfig.json" />
+    <_ContentIncludedByDefault Remove="publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\appsettings.Development.json" />
+    <_ContentIncludedByDefault Remove="publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\appsettings.json" />
+    <_ContentIncludedByDefault Remove="publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\EtUdS.Server.deps.json" />
+    <_ContentIncludedByDefault Remove="publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\EtUdS.Server.runtimeconfig.json" />
+    <_ContentIncludedByDefault Remove="publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\appsettings.Development.json" />
+    <_ContentIncludedByDefault Remove="publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\appsettings.json" />
+    <_ContentIncludedByDefault Remove="publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\EtUdS.Server.deps.json" />
+    <_ContentIncludedByDefault Remove="publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\EtUdS.Server.runtimeconfig.json" />
+    <_ContentIncludedByDefault Remove="publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\appsettings.Development.json" />
+    <_ContentIncludedByDefault Remove="publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\appsettings.json" />
+    <_ContentIncludedByDefault Remove="publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\EtUdS.Server.deps.json" />
+    <_ContentIncludedByDefault Remove="publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\EtUdS.Server.runtimeconfig.json" />
+    <_ContentIncludedByDefault Remove="publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\appsettings.Development.json" />
+    <_ContentIncludedByDefault Remove="publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\appsettings.json" />
+    <_ContentIncludedByDefault Remove="publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\EtUdS.Server.deps.json" />
+    <_ContentIncludedByDefault Remove="publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\EtUdS.Server.runtimeconfig.json" />
+    <_ContentIncludedByDefault Remove="publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\appsettings.Development.json" />
+    <_ContentIncludedByDefault Remove="publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\appsettings.json" />
+    <_ContentIncludedByDefault Remove="publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\EtUdS.Server.deps.json" />
+    <_ContentIncludedByDefault Remove="publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\EtUdS.Server.runtimeconfig.json" />
+    <_ContentIncludedByDefault Remove="publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\appsettings.Development.json" />
+    <_ContentIncludedByDefault Remove="publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\appsettings.json" />
+    <_ContentIncludedByDefault Remove="publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\EtUdS.Server.deps.json" />
+    <_ContentIncludedByDefault Remove="publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\EtUdS.Server.runtimeconfig.json" />
+    <_ContentIncludedByDefault Remove="publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\appsettings.Development.json" />
+    <_ContentIncludedByDefault Remove="publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\appsettings.json" />
+    <_ContentIncludedByDefault Remove="publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\EtUdS.Server.deps.json" />
+    <_ContentIncludedByDefault Remove="publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\EtUdS.Server.runtimeconfig.json" />
+    <_ContentIncludedByDefault Remove="publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\appsettings.Development.json" />
+    <_ContentIncludedByDefault Remove="publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\appsettings.json" />
+    <_ContentIncludedByDefault Remove="publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\EtUdS.Server.deps.json" />
+    <_ContentIncludedByDefault Remove="publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\EtUdS.Server.runtimeconfig.json" />
+    <_ContentIncludedByDefault Remove="publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\appsettings.Development.json" />
+    <_ContentIncludedByDefault Remove="publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\appsettings.json" />
+    <_ContentIncludedByDefault Remove="publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\EtUdS.Server.deps.json" />
+    <_ContentIncludedByDefault Remove="publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\EtUdS.Server.runtimeconfig.json" />
+    <_ContentIncludedByDefault Remove="publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\appsettings.Development.json" />
+    <_ContentIncludedByDefault Remove="publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\appsettings.json" />
+    <_ContentIncludedByDefault Remove="publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\EtUdS.Server.deps.json" />
+    <_ContentIncludedByDefault Remove="publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\EtUdS.Server.runtimeconfig.json" />
+    <_ContentIncludedByDefault Remove="publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\appsettings.Development.json" />
+    <_ContentIncludedByDefault Remove="publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\appsettings.json" />
+    <_ContentIncludedByDefault Remove="publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\EtUdS.Server.deps.json" />
+    <_ContentIncludedByDefault Remove="publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\publish\EtUdS.Server.runtimeconfig.json" />
+  </ItemGroup>
+</Project>

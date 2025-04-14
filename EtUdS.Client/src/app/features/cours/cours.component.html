@@ -1,0 +1,19 @@
+<div class="cours">
+  <header [titres]="[{ text: 'Cours', lien: '' }]"></header>
+  <div class="body">
+    <div class="devoirs-cards" *ngIf="cours.length > 0">
+      <cours-card
+        *ngFor="let cour of cours"
+        [sigle]="cour.sigle"
+        [titre]="cour.titre"
+        [prenomProf]="cour.prenomProf"
+        [nomProf]="cour.nomProf"
+        [id]="cour.id">
+      </cours-card>
+    </div>
+
+    <div *ngIf="cours.length === 0" class="no-cours-message">
+      Aucun cours d'inscrit pour le moment.
+    </div>
+  </div>
+</div>

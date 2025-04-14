@@ -1,0 +1,41 @@
+﻿<div class="devoirs">
+  <header [titres]="[{ text: 'Devoirs', lien: '' }]"></header>
+  <div class="body">
+    <div class="devoirs-cards" *ngIf="devoirs.length > 0">
+      <devoir-card
+        *ngFor="let devoir of devoirs"
+        [code]="devoir.sigle"
+        [nom]="devoir.nom"
+        [etat]="getEtatLabel(devoir.etat)"
+        [date]="devoir.dateLimiteSoumission"
+        [note]="devoir.note"
+        [id]="devoir.id">
+      </devoir-card>
+    </div>
+
+    <div *ngIf="devoirs.length === 0" class="no-devoirs-message">
+      Aucun devoir disponibles pour le moment.
+    </div>
+
+    <div class="filtre">
+      Filtre :
+      <div class="filtre-select">
+        <select [(ngModel)]="selectedFilter" (change)="getDevoirs()">
+          <option value="">-- Choisir un filtre --</option>
+          <optgroup *ngIf="cours.length > 0" label="Cours">
+            <option *ngFor="let c of cours"
+                    [value]="'Cours:' + c.sigle">{{ c.sigle }}
+            </option>
+          </optgroup>
+
+          <optgroup label="État">
+            <option value="Etat:1">À faire</option>
+            <option value="Etat:2">En retard</option>
+            <option value="Etat:3">Soumis</option>
+            <option value="Etat:4">Évalué</option>
+          </optgroup>
+        </select>
+      </div>
+    </div>
+  </div>
+</div>

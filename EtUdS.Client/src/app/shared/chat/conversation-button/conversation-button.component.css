@@ -1,0 +1,67 @@
+.conversation {
+  position: relative;
+  width: 100%;
+  border: 1px solid gray;
+  border-radius: 5px;
+  padding: 5px 7px;
+  box-sizing: border-box;
+  color: #565656;
+  font-family: 'Poppins', sans-serif;
+}
+
+.conversation:hover {
+  background: linear-gradient(to right, rgba(110, 229, 235, 0.3), rgba(4, 169, 196, 0.3));
+}
+
+.nom {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.ligne-message {
+  display: flex;
+  flex-direction: row;
+  font-size: 12px;
+}
+.ligne-message {
+  display: flex;
+  flex-direction: row;
+  font-size: 12px;
+  align-items: center;
+}
+
+.message {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  color: #737373;
+  min-width: 0;
+}
+
+.text {
+  flex-grow: 1;
+  min-width: 0;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.message span:last-child {
+  flex-shrink: 0;
+  margin-left: 5px;
+}
+
+
+.notifications {
+  position: absolute;
+  border-radius: 50%;
+  z-index: 100;
+  background: red;
+  bottom: 55%;
+  right: 15px;
+  width: 13px;
+  height: 13px;
+  border: none;
+}
+

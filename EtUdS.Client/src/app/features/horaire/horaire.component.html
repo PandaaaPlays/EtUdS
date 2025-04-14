@@ -1,0 +1,49 @@
+<div class="horaire">
+  <header [titres]="[{ text: 'Horaire', lien: '' }]"></header>
+  <div class="horaire-header">
+    <button class="change-day-button left" (click)="changeWeek('gauche')">‹</button>
+    <div class="jours">
+      <p *ngFor="let jour of jours">
+        <span>{{ jour.dayName }}</span>
+        <span [ngClass]="{ 'today': jour.date === today }">{{ jour.displayDate }}</span>
+      </p>
+    </div>
+    <button class="change-day-button right" (click)="changeWeek('droite')">›</button>
+  </div>
+  <div class="body" #horaireBody>
+    <div class="horaire-body">
+      <div class="heures">
+        <div *ngFor="let heure of heures" class="heure">
+          <p>{{ heure }}:00</p>
+          <div class="ligne">
+            <div *ngFor="let jour of jours" class="case">
+              <horaire-event
+                *ngIf="isMatchingDevoirHourAndDay(heure, jour.date) as devoir"
+                [sigle]="devoir.sigle"
+                [nom]="devoir.nom"
+                [hour]="''"
+                [hourEnd]="formatTime(devoir.dateLimiteSoumission)"
+                [top]="calculateEventTop(devoir.dateLimiteSoumission, true)"
+                [height]="55"
+                [devoir]="true"
+                (click)="navigateToDevoir(devoir.id)">
+              </horaire-event>
+              <horaire-event
+                *ngIf="isMatchingSeanceHourAndDay(heure, jour.date) as seance"
+                [sigle]="seance.sigle"
+                [nom]="seance.titre"
+                [hour]="formatTime(seance.debutSeance)"
+                [hourEnd]="formatTime(seance.finSeance)"
+                [local]="seance.local"
+                [top]="calculateEventTop(seance.debutSeance, false)"
+                [height]="calculateEventHeight(seance.debutSeance, seance.finSeance)"
+                [devoir]="false"
+                (click)="navigateToCours(seance.idCours)">
+              </horaire-event>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

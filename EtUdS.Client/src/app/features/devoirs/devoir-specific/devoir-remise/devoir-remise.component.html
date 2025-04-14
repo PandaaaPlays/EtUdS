@@ -1,0 +1,65 @@
+<div class="remise">
+  <div class="informations">
+    <header [textSize]="20"
+            [titres]="[{ text: 'Informations', lien: '' }]">
+    </header>
+    <div class="corrections" *ngIf="soumissionsCorriges.length > 0">
+      <i class="fa-solid fa-circle-info"></i>
+      <span>Une correction est disponible pour ce devoir. Consulter vos
+        <a (click)="voirCorrections()">correction(s)</a> pour ce devoir.
+      </span>
+    </div>
+    <div class="body">
+      <div class="details">
+        <span><strong>Nom:</strong> {{devoir.nom}}</span>
+        <span><strong>Cours:</strong> {{devoir.sigle}}</span>
+        <span><strong>État:</strong> {{getEtat(devoir.etat)}}</span>
+        <span><strong>Date limite:</strong> {{formatDate(devoir.dateLimiteSoumission, true)}}</span>
+      </div>
+      <div *ngIf="devoir.etat === 4" class="note">
+        <svg width="auto" height="auto" viewBox="0 0 150 150">
+          <defs>
+            <linearGradient id="etudsBlue" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#6ee5eb"/>
+              <stop offset="100%" stop-color="#04a9c4"/>
+            </linearGradient>
+          </defs>
+          <!-- Cercle gris -->
+          <circle cx="75" cy="57" r="65" stroke="#E6E6E6" stroke-width="8" fill="none"/>
+          <!-- Cercle bleu -->  <!-- 2*pi*r = 408.41 -->
+          <circle cx="75" cy="57" r="65"
+                  stroke="url(#etudsBlue)"
+                  stroke-width="8"
+                  fill="none"
+                  stroke-dasharray="408.41"
+                  [attr.stroke-dashoffset]="408.41 * (1 - getNotePercentage() / 100)">
+          </circle>
+          <text x="77" y="68" font-size="30" text-anchor="middle" class="text-pourcentage">
+            {{ getNotePercentage() }}%
+          </text>
+          <text x="75" y="157" font-size="30" text-anchor="middle" class="text-pourcentage">
+            Note
+          </text>
+        </svg>
+      </div>
+    </div>
+  </div>
+
+  <soumissions
+    [idDevoir]="devoir.id"
+    (soumissionsCorrigesChange)="handleSoumissionsCorriges($event)"></soumissions>
+</div>
+
+<ng-template #correctionsTemplate>
+  <div class="corrections-dialog">
+    <div *ngFor="let correction of soumissionsCorriges">
+      <div class="ligne">
+        <span class="text-correction" [title]="correction.nomFichier">{{correction.nomFichier}} </span>
+        <div class="fin">
+          <span class="date">{{formatDate(correction.tempsSoumission, true)}}</span>
+          <i title="Télécharger" class="fa-solid fa-download download" (click)="downloadFile(correction.id)"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-template>

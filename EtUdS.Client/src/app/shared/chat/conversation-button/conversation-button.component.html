@@ -1,0 +1,14 @@
+<div class="conversation">
+  <span class="nom">{{ nom }}</span>
+  <div class="ligne-message" *ngIf="hasLastMessage()">
+    <span>{{ prenom }}:&nbsp;&nbsp;</span>
+    <div class="message">
+      <span class="text">{{ message }}</span>
+      <span> · {{ date }}</span>
+    </div>
+  </div>
+  <div class="ligne-message" *ngIf="!hasLastMessage()">
+    <span>Aucun message dans cette conversation...</span>
+  </div>
+  <div *ngIf="hasNotification" class="notifications"></div>
+</div>

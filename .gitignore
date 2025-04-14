@@ -1,0 +1,10 @@
+.sln
+.vs
+.idea
+.vscode
+*/obj/
+*/bin/
+EtUdS.Server/publish
+publish
+node_modules
+certs

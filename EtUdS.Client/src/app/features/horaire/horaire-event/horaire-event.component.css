@@ -1,0 +1,75 @@
+.horaire-event {
+  position: absolute;
+  top: 0;
+  left: 2%;
+  right: 2%;
+  max-width: 96%;
+  box-sizing: border-box;
+  padding: 5px;
+  background: linear-gradient(to right, rgba(110, 229, 235, 1), rgba(59, 200, 216, 1));
+  border-radius: 8px;
+  border-right: 4px solid rgba(4, 169, 196, 1);
+  overflow: hidden;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  z-index: 3;
+  transition: all 0.3s ease-in-out;
+}
+
+.horaire-event.devoir {
+  background: linear-gradient(to right, rgba(58, 139, 245, 1), rgba(36, 98, 190, 1));
+  border-right: 4px solid rgba(10, 76, 157, 1);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  gap: 3px;
+}
+
+.temps {
+  margin: 0;
+  text-align: left;
+  font-size: 12px;
+}
+
+.sigle {
+  text-transform: uppercase;
+  font-size: 13px;
+  padding: 1px 3px;
+  border: 1px solid white;
+  border-radius: 10px;
+  margin: 0;
+  text-align: right;
+  font-weight: bold;
+}
+
+.titre, .local {
+  margin: 0;
+  text-align: left;
+  font-weight: bold;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
+}
+
+.local {
+  font-size: 12px;
+  flex-grow: 1;
+  display: flex;
+  align-items: flex-end;
+}
+
+p {
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+  font-family: 'Poppins', sans-serif;
+}
+
+.horaire-event:hover {
+  box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.2);
+  transform: scale(1.02);
+}

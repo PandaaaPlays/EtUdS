@@ -1,0 +1,20 @@
+<div class="etuds-navbar" [class.collapsed]="isCollapsed">
+  <div class="header">
+    <img src="/assets/icon.png" alt="Logo" class="icon" />
+    <img src="/assets/logo.png" alt="ÉtUdS" class="logo" *ngIf="!isCollapsed" />
+  </div>
+  <div class="body">
+    <pages-button [buttonText]="'Cours'" [iconClass]="'fa-solid fa-book'" routerLink="/cours" class="selected" [collapsed]="isCollapsed"></pages-button>
+    <pages-button [buttonText]="'Devoirs'" [iconClass]="'fa-solid fa-file-lines'" routerLink="/devoirs" [collapsed]="isCollapsed"></pages-button>
+    <pages-button [buttonText]="'Horaire'" [iconClass]="'fa-solid fa-calendar-week'" routerLink="/horaire" [collapsed]="isCollapsed"></pages-button>
+  </div>
+  <div class="footer">
+    <div class="splitter"></div>
+    <span class="connexion" *ngIf="!isCollapsed">Bonjour {{ nom }},</span>
+    <pages-button [buttonText]="'Déconnexion'" [iconClass]="'fa-solid fa-arrow-right-to-bracket'" routerLink="/connexion" [collapsed]="isCollapsed"></pages-button>
+  </div>
+</div>
+
+<button class="toggle-button" (click)="toggleCollapse()">
+  <i class="fa-solid" [ngClass]="{'fa-chevron-left': !isCollapsed, 'fa-chevron-right': isCollapsed}"></i>
+</button>

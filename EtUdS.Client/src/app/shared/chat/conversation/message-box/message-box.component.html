@@ -1,0 +1,6 @@
+<div class="message">
+  <span class="titre-message" *ngIf="!systemMessage && !hiddenTitle" [ngClass]="{ 'droite': envoiSelf }">{{ nom }} · {{ date }}</span>
+  <div class="message-box" [ngClass]="{ 'droite': envoiSelf, 'centre': systemMessage }" [title]="titleVues">
+    {{ message }}
+  </div>
+</div>

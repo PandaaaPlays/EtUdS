@@ -1,0 +1,42 @@
+﻿::ng-deep .mat-mdc-dialog-container {
+  border-radius: 5px !important;
+}
+
+.dialog {
+  background: #fff;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  font-family: 'Poppins', sans-serif;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.header {
+  margin-left: 15px;
+  color: #565656;;
+  font-size: 20px;
+  font-weight: bold;
+  margin-right: 15px;
+  display: flex;
+
+  i {
+    margin-top: 4px;
+    margin-left: auto;
+    color: #E6E6E6;
+    cursor: pointer;
+  }
+}
+
+.body {
+  margin: 0 15px;
+  color: #565656;
+}
+
+.footer {
+  padding-bottom: 10px;
+  display: flex;
+}
+
+.button {
+  margin-left: auto;
+  margin-right: 15px;
+}

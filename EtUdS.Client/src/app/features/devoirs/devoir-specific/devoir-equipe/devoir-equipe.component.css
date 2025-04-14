@@ -1,0 +1,155 @@
+.equipe {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: auto;
+}
+
+.equipe::-webkit-scrollbar {
+  display: none;
+}
+
+.inviter-membre {
+  margin-left: 15px;
+  display: flex;
+  flex-direction: row;
+}
+
+.select {
+  flex-shrink: 0;
+  width: 350px;
+  position: relative;
+  background-color: #E6E6E6;
+  height: 35px;
+  border-radius: 4px;
+  margin-right: 10px;
+}
+
+.select select {
+  font-size: 16px;
+  width: 100%;
+  padding: 8px 24px 8px 10px;
+  font-family: 'Poppins', sans-serif;
+  color: #565656;
+  border: none;
+  background-color: transparent;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  cursor: pointer;
+}
+
+.select select:active, .select select:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.select:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 8px;
+  width: 0;
+  height: 0;
+  margin-top: -2px;
+  border-top: 5px solid #aaa;
+  border-right: 5px solid transparent;
+  border-left: 5px solid transparent;
+}
+
+.equipe-size {
+  margin-top: 15px;
+  font-family: 'Poppins', sans-serif;
+  padding: 0 0 5px 15px;
+}
+
+.inviter {
+  margin-right: 15px;
+}
+
+.quitter {
+  margin-left: auto;
+  margin-right: 15px;
+  max-height: 35px;
+}
+
+.quitter:hover {
+  background: #c82333;
+}
+
+.disabled {
+  cursor: not-allowed !important;
+}
+
+.invitations {
+  border: 1px solid rgba(4, 169, 196, 1);
+  padding: 0 10px;
+  display: flex;
+  align-items: center;
+  min-height: 35px;
+  border-radius: 10px;
+  font-family: 'Poppins', sans-serif;
+  margin: 0 0 15px 15px;
+  background: rgba(110, 229, 235, 0.3);
+  color: #565656;
+
+  span {
+    margin-left: 10px;
+  }
+  a {
+    text-decoration: underline;
+    color: rgba(4, 169, 196, 1);
+    cursor: pointer;
+  }
+}
+
+.ligne {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 20px;
+
+  p {
+    flex-grow: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 0;
+  }
+}
+
+.refuser {
+  margin-left: 5px;
+  color: #dc3545;
+  cursor: pointer;
+}
+
+.refuser:hover {
+  color: #c82333;
+}
+
+.accepter {
+  color: #00a759;
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+.accepter:hover {
+  color: #007c52;
+}
+
+.fin-ligne {
+  padding-left: 10px;
+  flex-shrink: 0;
+  margin-left: auto;
+}
+
+.invitations-dialog {
+  margin-bottom: 10px;
+}
+
+documents {
+  flex-grow: 1;
+  overflow: auto;
+  min-height: 250px;
+}

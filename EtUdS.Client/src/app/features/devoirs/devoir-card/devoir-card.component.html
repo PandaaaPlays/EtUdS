@@ -1,0 +1,20 @@
+<div class="devoir-card">
+  <div class="card">
+    <div class="header" [ngStyle]="{'background': headerColor}">
+      <span class="code-cours">{{ code }}</span>
+      <span class="titre-devoir" title="{{nom}}">{{ nom }}</span>
+    </div>
+    <div class="body">
+      <p class="etat"><strong>État:</strong> {{ etat }}</p>
+      <p class="date-limite"><strong>Date limite:</strong> {{ formatDate(date, true) }}</p>
+      <div class="note-info">
+        <p class="note"><strong>Note:</strong> {{ getFormattedNote(note) }}</p>
+        <button class="info-button" [ngStyle]="{'background': headerColor}" (click)="navigateToDevoir()">Détails</button>
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+    <i class="fa-regular fa-clock"></i>
+    Temps restant: {{ tempsRestant }}
+  </div>
+</div>

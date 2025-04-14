@@ -1,0 +1,36 @@
+<div class="etuds-inscription">
+  <div class="div-logo">
+    <div class="blue-rectangle"></div>
+    <div class="white-rectangle"></div>
+    <img src="/assets/logo.png" alt="ÉtUdS" class="logo"/>
+  </div>
+  <body>
+    <div class="inscription-div">
+      <label class="inscription-message">Inscription à ÉtUdS!</label>
+      <label class="sub-message">Veuillez remplir les informations suivantes pour <br>créer votre compte</label>
+      <form class="inscription-form" (keydown.enter)="inscrireUtilisateur(); $event.preventDefault();">
+        <label>Courriel</label>
+        <input type="email" id="courriel">
+        <div class="half-inputs">
+          <div class="input-group">
+            <label>Prénom</label>
+            <input type="text" id="prenom">
+          </div>
+          <div class="input-group">
+            <label>Nom</label>
+            <input type="text" id="nom">
+          </div>
+        </div>
+        <label>Mot de passe</label>
+        <input type="password" id="MDP">
+        <label>Confirmer mot de passe</label>
+        <input type="password" id="MDPConfirme">
+      </form>
+      <button-etuds [couleur]="'bleu'" [texte]="'S\'inscrire'" (click)="inscrireUtilisateur()"></button-etuds>
+    </div>
+  </body>
+  <div class="retour-div" (click)="returnToConnection()">
+    <i class="fa-solid fa-arrow-left retour"></i>
+    <span>Retour</span>
+  </div>
+</div>

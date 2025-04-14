@@ -1,0 +1,146 @@
+.etuds-connexion {
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+
+.div-logo {
+  position: relative;
+  display: flex;
+}
+
+.blue-rectangle {
+  width: 250px;
+  height: 100%;
+  background: linear-gradient(to right, rgba(110, 229, 235, 1), rgba(4, 169, 196, 1));
+}
+
+.white-rectangle {
+  position: absolute;
+  width: 200px;
+  height: 77px;
+  left: 66%;
+  top: 9.3%;
+  border-radius: 2vh;
+  justify-self: center;
+  align-self: start;
+  background: white;
+}
+
+.logo {
+  position: absolute;
+  width: 200px;
+  left: 69%;
+  top: 10%;
+  border-radius: 10px;
+}
+
+body {
+  height: 100%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.connexion-div {
+  z-index: 999;
+  min-width: 45%;
+  width: auto;
+  max-width: 60%;
+  min-height: 50%;
+  height: auto;
+  max-height: 100vh;
+  border-radius: 20px;
+  box-sizing: border-box;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3%;
+  overflow: hidden;
+  justify-content: center;
+}
+
+.connexion-div label {
+  display: block;
+  font-family: 'Poppins', sans-serif;
+}
+
+.welcome-message {
+  font-size: 30px;
+  font-weight: bold;
+  color: transparent;
+  background: linear-gradient(to right, rgba(110, 229, 235, 1), rgba(4, 169, 196, 1));
+  -webkit-background-clip: text;
+  background-clip: text;
+  text-align: center;
+  margin: 0;
+}
+
+.sub-message {
+  color: #565656;
+  text-align: center;
+  margin: 0 0 20px 0;
+}
+
+.connexion-div label,
+.connexion-form,
+button-etuds,
+.inscription-message {
+  margin-bottom: 15px;
+}
+
+.connexion-form {
+  width: 400px;
+  max-width: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  position: relative;
+}
+
+.connexion-form label {
+  font-family: 'Poppins', sans-serif;
+  align-self: flex-start;
+  color: #565656;
+}
+
+.connexion-form input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #a9a9a9;
+  font-family: 'Poppins', sans-serif;
+  border-radius: 5px;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  outline: none;
+}
+
+button-etuds {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 45px;
+  font-size: 16px;
+  margin: 0 auto 10px auto;
+}
+
+.inscription-message{
+  color: #565656;
+  text-align: center;
+}
+
+.inscription-link{
+  color: rgba(4, 169, 196, 1);
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.inscription-link:hover {
+  text-decoration: none;
+  color: rgba(110, 229, 235, 1);
+}
+

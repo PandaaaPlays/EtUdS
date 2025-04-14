@@ -1,0 +1,48 @@
+.membre {
+  display: flex;
+  font-size: 20px;
+  align-items: center;
+}
+
+span {
+  font-family: 'Poppins', sans-serif;
+  color: #565656;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.nom {
+  padding-right: 15px;
+  width: 25%;
+  max-width: 250px;
+}
+
+.courriel {
+  padding-left: 15px;
+  border-left: 1px solid gray;
+}
+
+i {
+  margin: 0 15px;
+  text-align: center;
+  width: 20px;
+}
+
+.x {
+  margin-left: auto;
+  color: #dc3545;
+  cursor: pointer;
+}
+
+.x:hover {
+  color: #c82333;
+}
+
+.user {
+  color: #00a759;
+}
+
+.question, .disponible {
+  color: gray;
+}

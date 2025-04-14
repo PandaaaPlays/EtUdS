@@ -1,0 +1,33 @@
+services:
+  etuds:
+    build:
+      context: ./EtUdS.Server
+      dockerfile: Dockerfile
+    ports:
+      - "443:5000"
+    environment:
+      - ASPNETCORE_URLS=https://+:5000
+      - ASPNETCORE_Kestrel__Certificates__Default__Path=/certs/etuds.pfx
+      - ASPNETCORE_Kestrel__Certificates__Default__Password=etuds
+    volumes: 
+      - devoirs:/app/devoirs
+      - soumissions:/app/soumissions
+      - notesDeCours:/app/cours
+      - ./certs/etuds.pfx:/certs/etuds.pfx
+
+  postgresql:
+    image: postgres:latest
+    environment:
+      POSTGRES_USER: etuds-admin
+      POSTGRES_PASSWORD: etuds-admin-password
+      POSTGRES_DB: etuds-database
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgresql_data:/var/lib/postgresql/data
+        
+volumes:
+  postgresql_data:
+  devoirs: 
+  soumissions:
+  notesDeCours:

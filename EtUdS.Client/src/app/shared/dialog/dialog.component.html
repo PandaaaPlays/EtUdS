@@ -1,0 +1,17 @@
+﻿<div class="dialog" [ngStyle]="{'width': data.width + 'px'}">
+  <h1 class="header">{{ data.titre }}<i class="fa-solid fa-xmark" (click)="close()"></i></h1>
+  <div class="body">
+    <ng-container *ngIf="data.template; else defaultTemplate">
+      <ng-container [ngTemplateOutlet]="data.template"></ng-container>
+    </ng-container>
+    <ng-template #defaultTemplate>
+      <p>{{data.message}}</p>
+    </ng-template>
+  </div>
+  <div class="footer">
+    <button-etuds [texte]="data.texteBouton"
+                  [couleur]="data.couleurBouton"
+                  class="button"
+                  (click)="closeWithAction()"></button-etuds>
+  </div>
+</div>

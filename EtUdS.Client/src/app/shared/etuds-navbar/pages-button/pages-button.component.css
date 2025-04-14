@@ -1,0 +1,54 @@
+.button {
+  background: white;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 10px 20px;
+  font-size: 30px;
+  display: flex;
+  color: #565656;
+  border-radius: 7px;
+  position: relative;
+  cursor: pointer;
+  height: 40px;
+}
+
+.button.collapsed {
+  justify-content: center;
+}
+
+.button:hover {
+  background: linear-gradient(to right, rgba(110, 229, 235, 0.3), rgba(4, 169, 196, 0.3));
+  font-weight: bold;
+}
+
+.button.selected {
+  font-weight: bold;
+  color: transparent;
+  background: linear-gradient(to right, rgba(110, 229, 235, 1), rgba(4, 169, 196, 1));
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.button.selected:hover {
+  font-weight: bold;
+  color: #565656;
+  background: linear-gradient(to right, rgba(110, 229, 235, 0.3), rgba(4, 169, 196, 0.3));
+}
+
+.button.selected i,
+.button.selected .text {
+  color: inherit;
+}
+
+.button i {
+  width: 35px;
+  justify-content: center;
+  display: flex;
+}
+
+.text {
+  margin: 0 0 0 13px;
+  font-size: 25px;
+  padding-top: 3px;
+  font-family: 'Poppins', sans-serif;
+}

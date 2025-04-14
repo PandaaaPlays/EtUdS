@@ -1,0 +1,21 @@
+<div class="cours">
+  <header [titres]="[
+    { text: 'Cours', lien: '/cours' },
+    { text: ((cours && cours.sigle) ? cours.sigle : ''), lien: '' }
+  ]">
+  </header>
+
+  <div class="menu">
+    <button (click)="setActiveTab('note')" [ngClass]="{ 'active': activeTab === 'note' }">
+      Note de cours
+    </button>
+    <button  (click)="setActiveTab('devoir')" [ngClass]="{ 'active': activeTab === 'devoir' }">
+      Devoir
+    </button>
+  </div>
+
+  <div class="body" *ngIf="cours">
+    <cours-note *ngIf="activeTab === 'note'" [idCours]="cours.id"></cours-note>
+    <cours-devoir *ngIf="activeTab === 'devoir'" [sigleCours]="cours.sigle"></cours-devoir>
+  </div>
+</div>

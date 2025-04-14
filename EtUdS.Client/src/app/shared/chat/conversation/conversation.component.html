@@ -1,0 +1,63 @@
+<div class="conversation">
+  <i class="fa-solid fa-pen-to-square edit" (click)="menuModifierConversation()"></i>
+  <header [textSize]="20"
+          [titres]="[{ text: '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;' + conversationNom, lien: '' }]">
+  </header>
+  <span [title]="stringParticipants" class="membres">{{stringParticipants}}</span>
+  <i class="fa-solid fa-arrow-left retour" (click)="retour()"></i>
+
+  <div class="messages" #messagesContainer>
+    <message-box
+      *ngFor="let message of messages; let i = index"
+      [envoiSelf]="message.idSender === currentEtudiantId"
+      [nom]="message.nomSender"
+      [date]="message.date"
+      [message]="message.message"
+      [listeNomsVues]="message.vues"
+      [systemMessage]="message.idSender == null"
+      [hiddenTitle]="hideTitle(i)"
+    >
+    </message-box>
+    <span  class="aucun" *ngIf="messages.length === 0">Aucun message dans cette conversation...</span>
+  </div>
+
+  <div class="nouveau-message">
+    <textarea class="texte" [(ngModel)]="messageText" placeholder="Écrire un message" (keydown.enter)="envoyerMessage()"></textarea>
+    <i class="fa-solid fa-paper-plane bouton-envoi" [title]="'Envoyer'" (click)="envoyerMessage()"></i>
+  </div>
+</div>
+
+<ng-template #modifierConversationTemplate>
+  <header
+    [textSize]="20"
+    [titres]="[{ text: 'Titre de la conversation', lien: '' }]">
+  </header>
+  <div class="titre">
+    <textarea [(ngModel)]="titre" class="texte" [attr.placeholder]="conversationNom"></textarea>
+  </div>
+  <header
+    [textSize]="20"
+    [titres]="[{ text: 'Membres', lien: '' }]">
+  </header>
+  <div class="etudiants">
+    <span *ngFor="let participant of etudiantsAjoutes" class="nom">
+      {{ participant.prenom }} {{ participant.nom }}
+      <i class="fa-solid fa-circle-xmark" (click)="supprimerParticipant(participant)"></i>
+    </span>
+    <span *ngIf="etudiantsAjoutes.length === 0">Veuillez choisir un(e) étudiant(e).</span>
+  </div>
+  <div class="ajouter-etudiant">
+    <div class="select">
+      <select [(ngModel)]="etudiantSelectionne">
+        <option [value]="null" selected>
+          -- Choisir un(e) étudiant(e) --
+        </option>
+        <option *ngFor="let participant of etudiantsFiltered" [ngValue]="participant">
+          {{ participant.prenom }} {{ participant.nom }}
+        </option>
+      </select>
+    </div>
+    <button-etuds [texte]="'Ajouter'" [couleur]="'vert'" [fullWidth]="true" class="bouton-ajouter" (click)="ajouterParticipant()"></button-etuds>
+    <button-etuds [texte]="'Quitter'" [couleur]="'rouge'" [fullWidth]="false" class="bouton-quitter" (click)="quitterPrompt()"></button-etuds>
+  </div>
+</ng-template>

@@ -1,0 +1,198 @@
+.chat-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  z-index: 99;
+  background: linear-gradient(to right, rgba(110, 229, 235, 1), rgba(4, 169, 196, 1));
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  font-size: 24px;
+  transition: transform 0.2s ease;
+}
+
+.chat-button:hover {
+  transform: scale(1.1);
+}
+
+.notifications {
+  position: fixed;
+  border-radius: 50%;
+  z-index: 100;
+  background: red;
+  bottom: 62px;
+  right: 20px;
+  width: 13px;
+  height: 13px;
+  border: 2px solid white;
+  transition: bottom 0.2s ease, right 0.2s ease, transform 0.2s ease;
+}
+
+.chat-button:hover + .notifications {
+  bottom: 65px;
+  right: 17px;
+  transform: scale(1.1);
+}
+
+.chat {
+  position: fixed;
+  bottom: 45px;
+  right: 45px;
+  z-index: 101;
+  width: 35%;
+  height: 65%;
+  background: white;
+  box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  border: 1px solid gray;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+}
+
+.conversations {
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-bottom: auto;
+}
+
+.conversations::-webkit-scrollbar {
+  display: none;
+}
+
+.nouvelle-conversation {
+  border: 1px solid gray;
+  margin-left: 10px;
+  flex-grow: 1;
+  border-radius: 5px;
+}
+
+.bouton-creer {
+  margin-top: 10px;
+}
+
+.etudiants {
+  width: 100%;
+  height: auto;
+  border: 1px solid gray;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  padding: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  box-sizing: border-box;
+}
+
+.etudiants .nom {
+  background-color: #E6E6E6;
+  padding: 0 5px;
+  font-size: 14px;
+  border-radius: 8px;
+
+  i {
+    cursor: pointer;
+  }
+}
+
+.select {
+  flex-shrink: 0;
+  width: 300px;
+  position: relative;
+  background-color: #E6E6E6;
+  height: 35px;
+  border-radius: 4px;
+  margin-right: 10px;
+}
+
+.select select {
+  font-size: 16px;
+  width: 100%;
+  padding: 8px 24px 8px 10px;
+  font-family: 'Poppins', sans-serif;
+  color: #565656;
+  border: none;
+  background-color: transparent;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  cursor: pointer;
+}
+
+.select select:active, .select select:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.select:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 8px;
+  width: 0;
+  height: 0;
+  margin-top: -2px;
+  border-top: 5px solid #aaa;
+  border-right: 5px solid transparent;
+  border-left: 5px solid transparent;
+}
+
+.ajouter-etudiant {
+  display: flex;
+  flex-direction: row;
+  height: 35px;
+  margin-bottom: 10px;
+}
+
+.bouton-ajouter {
+  margin-left: auto;
+  width: 100%;
+}
+
+.no-conversations-message {
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: auto;
+}
+
+conversation {
+  display: flex;
+  flex-grow: 1;
+  height: 100%;
+}
+
+conversation-button {
+  cursor: pointer;
+}
+
+.titre {
+  width: 100%;
+  display: flex;
+  margin-bottom: 15px;
+}
+
+.texte {
+  background: #E6E6E6;
+  outline: none;
+  border-radius: 5px;
+  color: #565656;
+  padding: 3px 6px;
+  border: none;
+  font-size: 13px;
+  font-family: 'Poppins', sans-serif;
+  resize: none;
+  height: 19px;
+  flex-grow: 1;
+}
+
+.texte::-webkit-scrollbar {
+  display: none;
+}

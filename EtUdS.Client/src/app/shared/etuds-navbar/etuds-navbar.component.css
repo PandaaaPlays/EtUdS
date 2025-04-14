@@ -1,0 +1,91 @@
+.etuds-navbar {
+  width: 325px;
+  height: 100%;
+  box-shadow: 5px 0 10px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  z-index: 999;
+}
+
+.etuds-navbar.collapsed {
+  width: 90px;
+}
+
+.header {
+  height: 80px;
+  padding-top: 5px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-left: 15px;
+}
+
+.icon {
+  height: 60px;
+}
+
+.logo {
+  height: 60px;
+  margin-left: 25px;
+}
+
+.body {
+  margin: 15px;
+}
+
+pages-button {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  margin: auto 15px 0 15px;
+  font-size: 20px;
+  font-family: 'Poppins', sans-serif;
+  color: #565656;
+}
+
+.splitter {
+  height: 2px;
+  background: linear-gradient(to right, rgba(110, 229, 235, 0.8), rgba(4, 169, 196, 0.8));
+  margin-bottom: 15px;
+}
+
+.connexion {
+  padding: 0 15px 5px 15px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.toggle-button {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  background: white;
+  border: 1px solid #E6E6E6;
+  left: 312px;
+  box-shadow: 5px 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+  width: 30px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 999;
+}
+
+.etuds-navbar.collapsed + .toggle-button {
+  left: 77px;
+}
+
+.toggle-button:hover {
+  background: #E6E6E6;
+}

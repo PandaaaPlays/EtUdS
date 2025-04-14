@@ -1,0 +1,169 @@
+.etuds-inscription {
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+
+.div-logo {
+  position: relative;
+  display: flex;
+}
+
+.blue-rectangle {
+  width: 250px;
+  height: 100%;
+  background: linear-gradient(to right, rgba(110, 229, 235, 1), rgba(4, 169, 196, 1));
+}
+
+.white-rectangle {
+  position: absolute;
+  width: 200px;
+  height: 77px;
+  left: 66%;
+  top: 9.3%;
+  border-radius: 2vh;
+  justify-self: center;
+  align-self: start;
+  background: white;
+}
+
+.logo {
+  position: absolute;
+  width: 200px;
+  left: 69%;
+  top: 10%;
+  border-radius: 10px;
+}
+
+body {
+  height: 100%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.inscription-div {
+  display: flex;
+  z-index: 999;
+  min-width: 45%;
+  width: auto;
+  max-width: 60%;
+  min-height: 50%;
+  height: auto;
+  max-height: 90%;
+  border-radius: 20px;
+  box-sizing: border-box;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  justify-self: center;
+  padding: 8px;
+  flex-direction: column;
+  overflow: auto;
+  justify-content: center;
+}
+
+.inscription-div label {
+  font-family: 'Poppins', sans-serif;
+}
+
+.inscription-message {
+  font-size: 30px;
+  font-weight: bold;
+  color: transparent;
+  background: linear-gradient(to right, rgba(110, 229, 235, 1), rgba(4, 169, 196, 1));
+  -webkit-background-clip: text;
+  background-clip: text;
+  text-align: center;
+  margin: 0;
+}
+
+.sub-message{
+  color: #565656;
+  text-align: center;
+  margin: 0 0 20px 0;
+}
+
+.inscription-form{
+  width: 400px;
+  max-width: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  position: relative;
+}
+
+.inscription-form label {
+  font-family: 'Poppins', sans-serif;
+  align-self: flex-start;
+  color: #565656;
+}
+
+.inscription-form input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #a9a9a9;
+  font-family: 'Poppins', sans-serif;
+  border-radius: 5px;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  outline: none;
+}
+
+button-etuds {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  height: 30px;
+  margin: 0 auto 10px auto;
+}
+
+.half-inputs {
+  display: flex;
+  gap: 16px;
+}
+
+.input-group {
+  flex: 1;
+  max-width: 200px;
+}
+
+.input-group input {
+  width: 100%;
+  max-width: 200px;
+}
+
+button-etuds {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  height: 30px;
+  margin: 0 auto 10px auto;
+}
+
+.retour-div {
+  display: flex;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  align-items: center;
+
+  span {
+    color: #565656;
+    font-family: 'Poppins', sans-serif;
+    margin-left: 8px;
+  }
+}
+
+.retour-div:hover span {
+  text-decoration: underline;
+}
+
+.retour {
+  color: #565656;
+  font-size: 20px;
+  font-weight: bold;
+}

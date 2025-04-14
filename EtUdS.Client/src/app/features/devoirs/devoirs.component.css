@@ -1,0 +1,67 @@
+.body {
+  display: flex;
+  overflow: auto;
+}
+
+.devoirs-cards {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.filtre {
+  font-family: 'Poppins', sans-serif;
+  color: #565656;
+  font-size: 20px;
+  padding: 10px 10px;
+  height: max-content;
+  border: 1px solid gray;
+  border-radius: 10px;
+  margin-left: auto;
+}
+
+.no-devoirs-message {
+  padding-right: 5px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.filtre-select {
+  flex-shrink: 0;
+  width: 250px;
+  position: relative;
+  background-color: #E6E6E6;
+  height: 35px;
+  margin-left: 1px;
+  border-radius: 4px;
+}
+
+.filtre-select select {
+  font-size: 16px;
+  width: 100%;
+  padding: 8px 24px 8px 10px;
+  font-family: 'Poppins', sans-serif;
+  color: #565656;
+  border: none;
+  background-color: transparent;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  cursor: pointer;
+}
+
+.filtre-select select:active, .filtre-select select:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.filtre-select:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 8px;
+  width: 0;
+  height: 0;
+  margin-top: -2px;
+  border-top: 5px solid #aaa;
+  border-right: 5px solid transparent;
+  border-left: 5px solid transparent;
+}

@@ -1,0 +1,4 @@
+<div class="button" [ngClass]="{ selected: isSelected, collapsed: collapsed }">
+  <i class="{{iconClass}}"></i>
+  <div *ngIf="!collapsed" class="text">{{buttonText}}</div>
+</div>

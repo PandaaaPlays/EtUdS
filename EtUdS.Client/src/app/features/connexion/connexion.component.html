@@ -1,0 +1,21 @@
+<div class="etuds-connexion">
+  <div class="div-logo">
+    <div class="blue-rectangle"></div>
+    <div class="white-rectangle"></div>
+    <img src="/assets/logo.png" alt="ÉtUdS" class="logo"/>
+  </div>
+  <body>
+    <div class="connexion-div">
+      <label class="welcome-message">Bienvenue chez ÉtUdS!</label>
+      <label class="sub-message">Connectez-vous pour accéder à votre compte</label>
+      <form class="connexion-form" (keydown.enter)="authenticateUser(); $event.preventDefault();">
+        <label>Courriel</label>
+        <input type="email" id="email">
+        <label>Mot de passe</label>
+        <input type="password" id="password">
+      </form>
+      <button-etuds [couleur]="'bleu'" [texte]="'Connexion'" (click)="authenticateUser()"></button-etuds>
+      <label class="inscription-message">Vous n’avez pas de compte? <a href="/inscription" class="inscription-link">Créer un compte</a></label>
+    </div>
+  </body>
+</div>

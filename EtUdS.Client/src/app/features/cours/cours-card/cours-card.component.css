@@ -1,0 +1,81 @@
+.cours-card-link {
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+}
+
+.cours-card{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+  color: #565656;
+}
+
+.cours-card:hover{
+  transform: scale(1.05);
+
+  .outter-layer {
+    box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.2);
+  }
+}
+
+.outter-layer{
+  border: 2px solid black;
+  border-radius: 20px;
+  overflow: hidden;
+  width: 265px;
+  font-family: 'Poppins', sans-serif;
+  background-color: white;
+  z-index: 1;
+  padding: 4px;
+  transition: box-shadow 0.2s ease-in-out;
+}
+
+.background {
+  padding: 4px;
+  border-radius: 15px;
+  background-image: linear-gradient(to right, rgba(110, 229, 235, 1), rgba(4, 169, 196, 1));
+}
+
+.inner-layer {
+  position: relative;
+  border-radius: 11px;
+  overflow: hidden;
+  max-width: 255px;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  padding: 10px;
+  background-color: white;
+}
+
+.code-cours{
+  text-transform: uppercase;
+  font-size: 20px;
+  margin: 5px 0;
+  padding: 0 4px;
+  font-weight: bold;
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.titre-cours{
+  font-size: 14px;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.prof-cours{
+  font-size: 14px;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-style: italic;
+}
+
+
